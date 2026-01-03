@@ -1,5 +1,4 @@
 #include <iostream>
-#include <windows.h>
 #include <iomanip>
 #include <string>
 #include <vector>
@@ -64,7 +63,6 @@ class TaskManager
 
 void  TaskManager :: addTask(const string& name, int priority, const string& deadlineDate, const string& deadlineTime)
 {
-        SetConsoleOutputCP(CP_UTF8);      //this line is to repersent emojies used in this code while running in terminal
         Task* n = new Task(name, priority, deadlineDate, deadlineTime);
         if (!head || priority < head->priority) 
         {
@@ -86,7 +84,6 @@ void  TaskManager :: addTask(const string& name, int priority, const string& dea
 
 void TaskManager :: deleteTask (const string & name)
 {
-    SetConsoleOutputCP(CP_UTF8);
     if (head == nullptr)
     {
         cout << "\n⚠️  No tasks to delete.\n";
@@ -110,7 +107,7 @@ void TaskManager :: deleteTask (const string & name)
 
     if (prev -> next == nullptr) 
     {
-        cout << "\n❌  Task  \""<< name << "\"not found. \n";
+        cout << "\n❌  Task  \""<< name << "\" not found. \n";
     }
     else 
     {
@@ -123,7 +120,6 @@ void TaskManager :: deleteTask (const string & name)
 
 void TaskManager :: editTask(const string& name)
 {
-    SetConsoleOutputCP(CP_UTF8);
     Task * temp1=head;
     while(temp1 && temp1->name!=name)//for finding the Task to edit
     {
@@ -174,7 +170,6 @@ void TaskManager :: editTask(const string& name)
 
 void  TaskManager :: viewTasks() const
 {
-    SetConsoleOutputCP(CP_UTF8);
         if (!head) {
             cout << "\n📭 No tasks available.\n";
             return;
@@ -199,7 +194,6 @@ void  TaskManager :: viewTasks() const
 
 void TaskManager:: viewTasksSortedByDeadline() const 
 {
-    SetConsoleOutputCP(CP_UTF8);
     if (!head) 
     {
         cout << "\n📭 No tasks available.\n";
@@ -245,7 +239,6 @@ int main ()
     int choice;
     string name, deadlineDate, deadlineTime;
     int priority;
-    SetConsoleOutputCP(CP_UTF8);
 
     do {
         cout << "\n📋 ==== Daily Task Manager ====\n";
