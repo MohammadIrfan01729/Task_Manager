@@ -68,6 +68,7 @@ Use a C++ compiler supporting C++11 or later. On Windows, compile with:
 ## Contact
 
 For questions or suggestions, please reach out during academic or college forums related to CBIT programming projects.
+Linked IN : www.linkedin.com/in/mdirfan01729
 
 ---
 
